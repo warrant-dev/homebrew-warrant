@@ -5,20 +5,20 @@
 class Warrant < Formula
   desc ""
   homepage "https://warrant.dev"
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.4.0/warrant-cli_0.4.0_Darwin_x86_64.tar.gz"
-      sha256 "3986c69509060683170d6c51181e63567442ac10e0250eee5dc192ce91e9e292"
+    if Hardware::CPU.arm?
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.5.0/warrant-cli_0.5.0_Darwin_arm64.tar.gz"
+      sha256 "d690b3b713494f50af1d19ae734d46e770d6ea1f80b3e24fd61a9befd2cb1584"
 
       def install
         bin.install "warrant"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.4.0/warrant-cli_0.4.0_Darwin_arm64.tar.gz"
-      sha256 "ab0da9591b63a402a7b64c8b92e589ffc616ed07bade668ae583dad8fed6f421"
+    if Hardware::CPU.intel?
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.5.0/warrant-cli_0.5.0_Darwin_x86_64.tar.gz"
+      sha256 "b5d02e0078b327e37003dbfb7d52a6b24ff4d895f0ee5947acfc8b8d69ef12b1"
 
       def install
         bin.install "warrant"
@@ -28,16 +28,16 @@ class Warrant < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.4.0/warrant-cli_0.4.0_Linux_arm64.tar.gz"
-      sha256 "979e0bccfcbc7d9958a1adef667c649ae5797c9ae951f5a95e168197801bdcf4"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.5.0/warrant-cli_0.5.0_Linux_arm64.tar.gz"
+      sha256 "d848458e9ec4048a906c5272722fe730d59956c5c23c447254976e446a732d64"
 
       def install
         bin.install "warrant"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.4.0/warrant-cli_0.4.0_Linux_x86_64.tar.gz"
-      sha256 "9d8865fb1ceb1eb25e5d31ed222293728d3adc1868a4d21025f49f5058fac195"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.5.0/warrant-cli_0.5.0_Linux_x86_64.tar.gz"
+      sha256 "a3ce51d21fcd9cbba8acbc7c1790a7a5d0133c1eddccc1e8fbe024c462e6413f"
 
       def install
         bin.install "warrant"
