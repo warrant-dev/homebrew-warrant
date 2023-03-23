@@ -5,20 +5,20 @@
 class Warrant < Formula
   desc ""
   homepage "https://warrant.dev"
-  version "0.6.1"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.6.1/warrant-cli_Darwin_x86_64.tar.gz"
-      sha256 "58ca493a36c515bed1761ede66a1cd85aa134e658b6b8a6d3a02e593b0851f7a"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.7.0/warrant-cli_Darwin_x86_64.tar.gz"
+      sha256 "78e423e15d4ec732cd0ab4b855a2a3e422e90d001cae5b2758b724c887ac68dc"
 
       def install
         bin.install "warrant"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.6.1/warrant-cli_Darwin_arm64.tar.gz"
-      sha256 "2d740ced6ddb407b875726f20e880a24eb7c2197b949b63d884289bf01dd9d29"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.7.0/warrant-cli_Darwin_arm64.tar.gz"
+      sha256 "cd95aadf2e68ac4f8f89e7857606e62a77f72a3d5ff0bb3fd227c68451431908"
 
       def install
         bin.install "warrant"
@@ -28,16 +28,16 @@ class Warrant < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.6.1/warrant-cli_Linux_arm64.tar.gz"
-      sha256 "1def980f1034ab67abfe8645861ce056f4d56ff2af9cb1f8e9588cedb54aeeda"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.7.0/warrant-cli_Linux_arm64.tar.gz"
+      sha256 "e14ef3cc7c5cc252457287137be13092f97f85f807dad01f21cfc47fe63d4f1d"
 
       def install
         bin.install "warrant"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.6.1/warrant-cli_Linux_x86_64.tar.gz"
-      sha256 "b77ed49ad425d56bf8bbde3ee6dbfc4e8ec23f99be4e0678662d952fb221eb1c"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.7.0/warrant-cli_Linux_x86_64.tar.gz"
+      sha256 "b8b67f04f9bd36be84d8a947436481f9b533718427adba93e68b6f0235f272ec"
 
       def install
         bin.install "warrant"
