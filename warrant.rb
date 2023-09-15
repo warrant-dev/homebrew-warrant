@@ -5,20 +5,20 @@
 class Warrant < Formula
   desc ""
   homepage "https://warrant.dev"
-  version "0.8.0"
+  version "0.9.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.8.0/warrant-cli_Darwin_x86_64.tar.gz"
-      sha256 "f8d00625dc86490ce56a12f0d07790bbd350ecbd2eba24077698eba568d84250"
+    if Hardware::CPU.arm?
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.9.1/warrant-cli_Darwin_arm64.tar.gz"
+      sha256 "073be1c8729e1fdddf41e10f3d81154511ee6a14e07db05408d4a19fd656475d"
 
       def install
         bin.install "warrant"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.8.0/warrant-cli_Darwin_arm64.tar.gz"
-      sha256 "8181c0d3f753f313cd6a3a5e28db8139646639195e4d7464a4dbfed4ef0dea84"
+    if Hardware::CPU.intel?
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.9.1/warrant-cli_Darwin_x86_64.tar.gz"
+      sha256 "2711495410e4b883f9060803f27210646b27dfb83e0fc9540dbcd3b7ba52e7eb"
 
       def install
         bin.install "warrant"
@@ -28,16 +28,16 @@ class Warrant < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.8.0/warrant-cli_Linux_arm64.tar.gz"
-      sha256 "ec750b15cd90928087a7c14bc26c3097522191e1ebd4bcc40d0fd9501b467ecc"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.9.1/warrant-cli_Linux_arm64.tar.gz"
+      sha256 "487b65f0c99bffdb76814cbc83e8695645704e06f7446b807b708bc3bf2e64cd"
 
       def install
         bin.install "warrant"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.8.0/warrant-cli_Linux_x86_64.tar.gz"
-      sha256 "e7288d7cce833de0f254e2cdc33ce8f1b15e040015baec2585e1281b1b33527c"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.9.1/warrant-cli_Linux_x86_64.tar.gz"
+      sha256 "ef0fdbba0ba381238fdc283b1fdf8b29e5fb7707136f495063d06adc0df3cbd8"
 
       def install
         bin.install "warrant"
