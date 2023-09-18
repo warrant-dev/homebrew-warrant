@@ -5,20 +5,20 @@
 class Warrant < Formula
   desc ""
   homepage "https://warrant.dev"
-  version "0.9.1"
+  version "0.10.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.9.1/warrant-cli_Darwin_arm64.tar.gz"
-      sha256 "073be1c8729e1fdddf41e10f3d81154511ee6a14e07db05408d4a19fd656475d"
+    if Hardware::CPU.intel?
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.10.0/warrant-cli_Darwin_x86_64.tar.gz"
+      sha256 "4faf2143ee987be4bce99cd3eae37f3cd2dc8a5da783cbeeaf72830c54b2f041"
 
       def install
         bin.install "warrant"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.9.1/warrant-cli_Darwin_x86_64.tar.gz"
-      sha256 "2711495410e4b883f9060803f27210646b27dfb83e0fc9540dbcd3b7ba52e7eb"
+    if Hardware::CPU.arm?
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.10.0/warrant-cli_Darwin_arm64.tar.gz"
+      sha256 "0865be5d475b5ee17e0ec0247b8c567e5b1363f90fe2ce31403bd23a182dceea"
 
       def install
         bin.install "warrant"
@@ -28,16 +28,16 @@ class Warrant < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.9.1/warrant-cli_Linux_arm64.tar.gz"
-      sha256 "487b65f0c99bffdb76814cbc83e8695645704e06f7446b807b708bc3bf2e64cd"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.10.0/warrant-cli_Linux_arm64.tar.gz"
+      sha256 "806c07040e91a0973d3250faa101ac815bd368a6800ca6bf2974b5ac4da48f25"
 
       def install
         bin.install "warrant"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.9.1/warrant-cli_Linux_x86_64.tar.gz"
-      sha256 "ef0fdbba0ba381238fdc283b1fdf8b29e5fb7707136f495063d06adc0df3cbd8"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.10.0/warrant-cli_Linux_x86_64.tar.gz"
+      sha256 "3a432b1faf285a33428c1ca8cc30a169c9d12f3868ea399d753f2663a5aec4cd"
 
       def install
         bin.install "warrant"
