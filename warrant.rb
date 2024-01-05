@@ -5,20 +5,20 @@
 class Warrant < Formula
   desc ""
   homepage "https://warrant.dev"
-  version "0.12.0"
+  version "0.13.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.12.0/warrant-cli_Darwin_arm64.tar.gz"
-      sha256 "0b49b849661b5cef857ab1da1aceaba6a0b804a644357f31de0b50a681e0a3cf"
+    if Hardware::CPU.intel?
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.13.0/warrant-cli_Darwin_x86_64.tar.gz"
+      sha256 "c5e796dca0ddc0a71297ebc5acec38f81129f9ead2bec153afc4301858db2032"
 
       def install
         bin.install "warrant"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.12.0/warrant-cli_Darwin_x86_64.tar.gz"
-      sha256 "55783bc7f0c1f25ba62adb1c00d3d1a2508f6d116b540ca983afbe034f017c52"
+    if Hardware::CPU.arm?
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.13.0/warrant-cli_Darwin_arm64.tar.gz"
+      sha256 "ab337c2979e964e2040d5a76f0e025c8d3ef29b8e1247a13ff3bd65e690c131b"
 
       def install
         bin.install "warrant"
@@ -28,16 +28,16 @@ class Warrant < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.12.0/warrant-cli_Linux_arm64.tar.gz"
-      sha256 "113dbc66c3ead0a756cc35595f9314e7f32d21b0f39250173977e4c2ff8f9405"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.13.0/warrant-cli_Linux_arm64.tar.gz"
+      sha256 "f9baba8fd3f08f0360845d38bc1a31d3afdf89c399d7356481796f55b5391090"
 
       def install
         bin.install "warrant"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.12.0/warrant-cli_Linux_x86_64.tar.gz"
-      sha256 "485ebb041135fab3ca85d1bfbef2233790935f224edc764d9d1391bdb02ecc4d"
+      url "https://github.com/warrant-dev/warrant-cli/releases/download/v0.13.0/warrant-cli_Linux_x86_64.tar.gz"
+      sha256 "6e867e96b0a819c9b0123ce18c3b100a0f34ff8d17e4e674451caa0eec1bd589"
 
       def install
         bin.install "warrant"
